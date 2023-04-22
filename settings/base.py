@@ -5,7 +5,7 @@ from pathlib import Path
 
 from settings.conf import *
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 sys.path.append(BASE_DIR)
 sys.path.append(os.path.join(BASE_DIR, 'apps'))
@@ -14,8 +14,6 @@ sys.path.append(os.path.join(BASE_DIR, 'apps'))
 ALLOWED_HOSTS = ['*']
 
 
-# Application definition
-
 DJANGO_AND_THIRD_PARTY_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -23,13 +21,15 @@ DJANGO_AND_THIRD_PARTY_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    'django_extensions'
+    'corsheaders',
+    'django_extensions',
+    'widget_tweaks',
 ]
 
 PROJECT_APPS = [
     'auths.apps.AuthsConfig',
     'main.apps.MainConfig',
+    'abstracts.apps.AbstractsConfig',
 ]
 
 INSTALLED_APPS = DJANGO_AND_THIRD_PARTY_APPS + PROJECT_APPS
@@ -37,6 +37,7 @@ INSTALLED_APPS = DJANGO_AND_THIRD_PARTY_APPS + PROJECT_APPS
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -65,9 +66,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'settings.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -75,9 +73,18 @@ DATABASES = {
     }
 }
 
+# DATABASES = {
+#     'default': {
 
-# Password validation
-# https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': '<db_name>',
+#         'USER': '<db_username>',
+#         'PASSWORD': '<password>',
+#         'HOST': '<db_hostname_or_ip>',
+#         'PORT': '<db_port>',
+#     }
+# }
+
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -95,12 +102,20 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-# Internationalization
-# https://docs.djangoproject.com/en/4.1/topics/i18n/
+REST_FRAMEWORK = {
+    # 'DEFAULT_PERMISSION_CLASSES': [
+    #     'rest_framework_permissions.DjangoModelPermissionsOrAnonReadOnly'
+    # ],
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+
+}
+
+
+AUTH_USER_MODEL = 'auths.CustomUser'
 
 LANGUAGE_CODE = 'en-us'
-
-# AUTH_USER_MODEL = 'auths.Client'
 
 TIME_ZONE = 'UTC'
 
@@ -108,13 +123,10 @@ USE_I18N = True
 
 USE_TZ = True
 
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.1/howto/static-files/
-
-STATIC_URL = 'static/'
-
-# Default primary key field type
-# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

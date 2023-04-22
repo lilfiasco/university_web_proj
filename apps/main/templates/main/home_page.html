@@ -1,0 +1,176 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <title>CraftedComforts</title>
+    <link rel="stylesheet" href="{% static 'css/home_page.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__controller">
+
+            <div class="shop_info">
+                <span class="iconify" data-icon="fa-solid:couch" data-flip="horizontal" 
+                    style="font-size:56px;" color="white"></span>
+                    <a href="room" class="link">Товары</a>
+                <div class="store_info">
+
+                    <div class="logo">
+                        <!-- <img src="logo.png" name="logo_pic" id="logo_pic"
+                        width="200" 
+                        height="140"> -->
+                        <h1 class="main__title">{{ctx_user.email}}</h1>
+
+                    </div>
+                    
+                </div>
+            </div>
+                
+            
+            <div class="user_info">
+                <div class="navs">
+                    {% if not ctx_user.is_anonymous %}
+                        <a href="/auths/profile" class="link">Профиль</a>
+                        <a href="/auths/log-out" class="link">Выйти</a>
+                    {% else %}
+                        <a href="/auths/" class="link">Войти</a>
+                        <a href="/auths/registration" class="link">Регистрация</a>
+                    {% endif %}
+                    <a href="" class="link">About</a>
+                </div>
+            </div>
+            
+        </div>
+    </header>
+    
+    <!-- <div class="card">
+        <h1 class="main__title">{{ctx_user.email}}</h1>
+        <h1>Welcome to the site!</h1>
+        <br><br><br>
+    </div> -->
+
+    <div class="main_content">
+        <div class="info1">
+            <div class="addreses">
+                <h3 align = "center">Наши филиалы</h3>
+                <hr id="line_style" style="width: 90%;">
+                
+                <h3 align = "center">Астана</h3>
+                <p align = "center">Ул. Такая-то, Дом Такой-то</p>
+                <p align = "center">Ул. Такая-то, Дом Такой-то</p>
+                <hr id="line_" style="width: 70%;">
+
+                <h3 align = "center">Алматы</h3>
+                <p align = "center">Ул. Такая-то, Дом Такой-то</p>
+                <p align = "center">Ул. Такая-то, Дом Такой-то</p>
+                <hr id="line_" style="width: 70%;">
+
+                <h3 align = "center">Караганда</h3>
+                <p align = "center">Ул. Такая-то, Дом Такой-то</p>
+                <hr id="line_" style="width: 70%;">
+            </div>
+            
+            <div class="discounts">
+                <h3 align = "center">Действующие акции</h3>
+                <hr id="line_style" style="width: 90%;">
+                
+                <h3 align = "center">Первый заказ</h3>
+                <p align = "center">После регистрации вам будет вышлен промокод. <br> Промокод даёт 10%-ную скидку для первой покупки. </p>
+                <hr id="line_" style="width: 70%;">
+
+                
+            </div>
+        </div>
+
+        <div class="info2">
+            <div class="famous_prod">
+                <h3 align = "center">Популярные товары</h3>
+                <hr id="line_style" style="width: 90%;">
+
+                <div class="prod_space">
+                    <div class="prod1">
+
+                        <div class="card_space">
+                            <div class="img_space">
+                                <img src="https://www.raftfurniture.co.uk/media/wysiwyg/Homepage_Sofas-old.jpg" id="furniture_pic">
+                            </div>
+                            
+                            <h3 align = "center">Диваны Coll.1</h3>
+                            <p align = "center">Хороший диван, берите. <br> От 80 000 тг </p>
+
+                        </div>
+
+                        <div class="card_space">
+                            <div class="img_space">
+                                <img src="https://www.raftfurniture.co.uk/media/wysiwyg/Homepage_Sofas-old.jpg" id="furniture_pic">
+                            </div>
+                            
+                            <h3 align = "center">Диваны Coll.1</h3>
+                            <p align = "center">Хороший диван, берите. <br> От 80 000 тг </p>
+
+                        </div>
+
+                        <div class="card_space">
+                            <div class="img_space">
+                                <img src="https://www.raftfurniture.co.uk/media/wysiwyg/Homepage_Sofas-old.jpg" id="furniture_pic">
+                            </div>
+                            
+                            <h3 align = "center">Диваны Coll.1</h3>
+                            <p align = "center">Хороший диван, берите. <br> От 80 000 тг </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="prod2">
+                        <div class="card_space">
+                            <div class="img_space">
+                                <img src="https://cdn.shopify.com/s/files/1/0503/0074/7976/files/Armchair_1800x.jpg?v=1613539657" id="furniture_pic">
+                            </div>
+                            
+                            <h3 align = "center"> Coll.2</h3>
+                            <p align = "center">Хорошее кресло, берите. <br> От 70 000 тг </p>
+
+                        </div>
+
+                        <div class="card_space">
+                            <div class="img_space">
+                                <img src="https://cdn.shopify.com/s/files/1/0503/0074/7976/files/Armchair_1800x.jpg?v=1613539657" id="furniture_pic">
+                            </div>
+                            
+                            <h3 align = "center"> Coll.2</h3>
+                            <p align = "center">Хорошее кресло, берите. <br> От 70 000 тг </p>
+
+                        </div>
+
+                        <div class="card_space">
+                            <div class="img_space">
+                                <img src="https://cdn.shopify.com/s/files/1/0503/0074/7976/files/Armchair_1800x.jpg?v=1613539657" id="furniture_pic">
+                            </div>
+                            
+                            <h3 align = "center"> Coll.2</h3>
+                            <p align = "center">Хорошее кресло, берите. <br> От 70 000 тг </p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- <footer class="footer">
+        <img src="logo.png" name="logo_pic" id="logo_pic"
+                    width="200" 
+                    height="130">
+        
+        <h3> (C) Copyright</h3>
+    </footer> -->
+
+
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+</body>
+</html>

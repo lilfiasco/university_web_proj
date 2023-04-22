@@ -1,0 +1,200 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">   
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    
+    <link rel="stylesheet" href="{% static 'css/registration.css' %}">
+
+    
+
+</head>
+<body>
+    <!-- <form action="" method="post">
+        <h1>WELCOME!</h1>
+        {% csrf_token %}
+        {{ ctx_form.as_p }}
+        <input type="submit" value="Register">
+    </form> -->
+
+    <header class="header">
+        <div class="header__controller">
+    
+            <span class="iconify" data-icon="fa-solid:couch" data-flip="horizontal" 
+                style="font-size:56px;" color="white"></span>
+                
+                
+            <div class="store_info">
+    
+                <div class="logo">
+                    <h1 class="main__title">{{ctx_user.email}}</h1>
+    
+                </div>
+                
+            </div>
+            
+            <div class="user_info">
+                <div class="navs">
+                    <a href="/auths/log-out" class="link">Гость</a>
+                    <a href="" class="link">About</a>
+                </div>
+            </div>
+            
+        </div>
+      </header>
+    
+    
+        <section class="login-block">
+          <div class="container">
+            <div class="hzaa row">
+              <div class="col-md-4 login-sec">
+                <h2 class="text-center">Register Now</h2>
+                <form class="login-form" method="POST">
+                  {% csrf_token %}
+    
+                  <div class="form-group">
+                    <label for="exampleInputPassword1" class="text-uppercase">Имя</label>
+                    <input type="text" class="form-control" id="first_name" name="first_name" placeholder="">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="exampleInputPassword1" class="text-uppercase">Фамилия</label>
+                    <input type="text" class="form-control" id="last_name" name="last_name" placeholder="">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="exampleInputEmail1" class="text-uppercase" >Почта</label>
+                    <input type="text" class="form-control" id="email" name="email" placeholder="">
+                  </div>
+    
+                  <div class="form-group">
+                    <label for="exampleInputPassword1" class="text-uppercase">Пароль</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="exampleInputPassword1" class="text-uppercase">Повторите пароль</label>
+                    <input type="password" class="form-control" id="password2" name="password2" placeholder="">
+                  </div>
+                  
+        
+                  <div class="form-check">
+                    <button type="submit" class="btn btn-login float-right">Регистрация</button>
+                  </div>
+        
+                </form>
+              </div>
+              <div class="col-md-8 px-0">
+                    <div class="carousel-inner">
+                        <img class="img-fluid w-100" src="https://img1.wsimg.com/isteam/ip/a362bf95-aa01-43cb-aa62-1b0218a35be7/20220227_172232.jpg/:/rs=h:1000,cg:true,m" style="height: 635px !important; width: 850px !important;" alt="First slide">
+                      
+                    </div>
+                    
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+<!--     
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+     -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <!-- <div class="cardd card rounded-3"> -->
+                <!-- <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img3.webp" width="100%" height="40%"
+                  class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;"
+                  alt="Sample photo"> -->
+
+
+                <!-- <div class="card-body p-4 p-md-5">
+                  <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Registration Info</h3> -->
+      
+                  <!-- <form class="register-form  mx-1 mx-md-4" method="post">
+                    {% csrf_token %}
+
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <input type="text" id="form3Example1c" class="form-control" />
+                        <label class="form-label" for="form3Example1c">Your Name</label>
+                      </div>
+                    </div>
+
+                    <div class="d-flex flex-row align-items-center mb-4">
+                        <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
+                          <input type="text" id="form3Example1c" class="form-control" />
+                          <label class="form-label" for="form3Example1c">Your Name</label>
+                        </div>
+                      </div>
+  
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <input type="email" id="form3Example3c" class="form-control" />
+                        <label class="form-label" for="form3Example3c">Your Email</label>
+                      </div>
+                    </div>
+  
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <input type="password" id="form3Example4c" class="form-control" />
+                        <label class="form-label" for="form3Example4c">Password</label>
+                      </div>
+                    </div>
+  
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <input type="password" id="form3Example4cd" class="form-control" />
+                        <label class="form-label" for="form3Example4cd">Repeat your password</label>
+                      </div>
+                    </div>
+  
+  
+                    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                      <button type="button" class="btn btn-primary btn-lg">Register</button>
+                    </div>
+  
+                  </form> -->
+  
+      
+                <!-- </div> -->
+              <!-- </div> -->
+            <!-- </div>
+          </div>
+        </div>
+      </section> -->
+
+
+</body>
+</html>

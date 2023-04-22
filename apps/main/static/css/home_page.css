@@ -1,0 +1,229 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    /* background: #c3c3c3;  
+    background: -webkit-linear-gradient(to bottom, rgb(225, 225, 225), #c3c3c3);  
+    background: linear-gradient(to bottom, rgb(225, 225, 225), #c3c3c3);  */
+}
+
+body::after {
+    content: "";
+    width: 350px;
+    height: 500px;
+    position: absolute;
+    left: calc(50% - 175px);
+
+    filter: blur(4px);
+    z-index: -1;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+}
+
+fieldset {
+    display: flex;
+    width: 85%;
+    flex-direction: column;
+    min-height: 30px;
+}
+
+input {
+    height: 35px;
+}
+input[type="text"], input[type="submit"], input[type="time"]{
+    width: 90%;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    height: 120px;
+    width: 100vw;
+    background: #262626;  /* fallback for old browsers */
+    /* background: -webkit-linear-gradient(to bottom, #262626, #2b2b2b);  
+    background: linear-gradient(to bottom, #262626, #2b2b2b);   */
+}
+
+.header__controller {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Garamond", Times, serif;
+}
+
+.store_info
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 50px;
+    height: 120px;
+    font-family: "Garamond", Times, serif;
+    padding-bottom: 10px;
+    padding-top: 20px;
+    color: white;
+}
+
+
+.navs {
+    display: flex;
+    gap: 45px;
+    align-items: center;
+    color: white;
+}
+
+.shop_info{
+    display: flex;
+    gap: 45px;
+    align-items: center;
+    color: white;
+    
+}
+
+.link {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+
+.main_content {
+    padding-top: 220px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 95%;
+    width: 100%;
+    /* background-color: rgb(130, 116, 99); */
+}
+
+.info1 {
+    /* background-color: rgb(145, 145, 201); */
+    height: 95%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Garamond", Times, serif;
+    font-size: 18px;
+}
+
+#line_style {
+    background-color: rgb(84, 84, 84);
+    color: rgb(84, 84, 84);
+}
+
+#line_ {
+    background-color: rgb(84, 84, 84);
+    color: rgb(84, 84, 84);
+}
+
+.addreses {
+    height: 60%;
+    width: 90%;
+    border: 1px solid rgb(84, 84, 84);
+    border-radius: 10px;
+}
+
+
+.discounts{
+    height: 30%;
+    width: 90%;
+    border: 1px solid rgb(84, 84, 84);
+    border-radius: 10px;
+}
+
+.info2 {
+    /* background-color: brown; */
+    height: 106%;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.famous_prod {
+    height: 90%;
+    width: 90%;
+    /* border: 1px solid rgb(84, 84, 84);
+    border-radius: 10px; */
+    /* background-color: #aba2dc; */
+    font-family: "Garamond", Times, serif;
+    font-size: 18px;
+}
+
+.prod_space {
+    height: 90%;
+    width: 100%;
+    /* background-color: #594d95; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.prod1 {
+    width: 100%;
+    height: 50%;
+    /* background-color: aquamarine; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.card_space {
+    width: 25%;
+    height: 90%;
+    border: 1px solid rgb(84, 84, 84);
+    border-radius: 10px;
+}
+
+.img_space {
+    width: 95%;
+    height: 60%;
+    /* background-color: blue; */
+    margin-left: 3%;
+    margin-top: 2%;
+    /* background-image: url("https://www.raftfurniture.co.uk/media/wysiwyg/Homepage_Sofas-old.jpg"); */
+}
+
+.prod2 {
+    width: 100%;
+    height: 50%;
+    /* background-color: rgb(46, 98, 81); */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#furniture_pic {
+    width: 100%;
+    height: 100%;
+}
+
+/* .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0px;
+    height: 70px;
+    width: 100vw;
+    background: #594d95;  
+    background: -webkit-linear-gradient(to bottom, #aba2dc, #594d95);  
+    background: linear-gradient(to bottom, #aba2dc, #594d95); 
+} */

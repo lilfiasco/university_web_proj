@@ -1,0 +1,242 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    /* background: #c3c3c3;  
+    background: -webkit-linear-gradient(to bottom, rgb(225, 225, 225), #c3c3c3);  
+    background: linear-gradient(to bottom, rgb(225, 225, 225), #c3c3c3);  */
+}
+
+
+.content {
+    display: flex;
+    align-items: center;
+}
+
+fieldset {
+    display: flex;
+    width: 85%;
+    flex-direction: column;
+    min-height: 30px;
+}
+
+input {
+    height: 35px;
+}
+input[type="text"], input[type="submit"], input[type="time"]{
+    width: 90%;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    height: 120px;
+    width: 100vw;
+    background: #262626;  /* fallback for old browsers */
+    /* background: -webkit-linear-gradient(to bottom, #262626, #2b2b2b);  
+    background: linear-gradient(to bottom, #262626, #2b2b2b);   */
+}
+
+.header__controller {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Garamond", Times, serif;
+}
+
+.store_info
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 50px;
+    height: 120px;
+    font-family: "Garamond", Times, serif;
+    padding-bottom: 10px;
+    padding-top: 20px;
+    color: white;
+}
+
+
+.navs {
+    display: flex;
+    gap: 45px;
+    align-items: center;
+    color: white;
+}
+
+.shop_info{
+    display: flex;
+    gap: 45px;
+    align-items: center;
+    color: white;
+    
+}
+
+.link {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+
+.main_content {
+    padding-top: 120px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 95%;
+    width: 100%;
+    /* background-color: rgb(130, 116, 99); */
+}
+
+#link_name {
+    font-family: "Garamond", Times, serif;
+    font-size: 22px;
+    margin-left: 50px;
+}
+
+#line_style {
+    background-color: rgb(84, 84, 84);
+    color: rgb(84, 84, 84);
+}
+
+.product_space {
+    position: absolute;
+    top: 150px;
+    width: 97vw;
+    height: 40vw;
+    /* background-color: aquamarine; */
+    font-family: "Garamond", Times, serif;
+}
+
+
+.product_info {
+    width: 17vw;
+    height: 26vw;
+    /* background-color: rgb(110, 146, 133); */
+    margin-top: 5vw;
+    margin-left: 4vw;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Garamond", Times, serif;
+    font-size: 22px;
+}
+
+.info1 {
+    height: 30%;
+    width: 100%;
+    border: 1px  rgb(84, 84, 84);
+    border-radius: 10px;
+}
+
+.info2 {
+    height: 60%;
+    width: 100%;
+    border: 1px  rgb(84, 84, 84);
+    border-radius: 10px;
+}
+
+.img_space {
+    width: 35vw;
+    height: 30vw;
+    margin-top: 6vw;
+    margin-left: 28vw;
+    /* background-color: rgb(110, 174, 152); */
+    display: inline-block;
+}
+
+.price_info {
+    width: 23vw;
+    height: 16vw;
+    /* background-color: rgb(110, 146, 133); */
+    margin-top: 6vw;
+    margin-left: 68vw;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} 
+
+.title_space {
+    margin-left: 6vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#pricee {
+    margin-left: 2vw;
+    font-size: 40px;
+}
+
+#available {
+    font-size: 20px;
+    color: #4fbf74;
+    margin-left: 2vw;
+}
+
+.btns_space {
+    width: 23vw;
+    height: 3vw;
+    /* background-color: antiquewhite; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.favs {
+    width: 35%;
+    background-color: #7e1d32;
+    border: 5px solid #7e1d32;
+    border-radius: 20px;
+}
+
+.cart {
+    width: 35%;
+    background-color: #e2c160;
+    border: 5px solid #e2c160;
+    border-radius: 20px;
+}
+
+
+.cart_icon {
+    font-size: 30px;
+    margin-left: 3vw;
+    margin-top: 5%;
+}
+
+
+.heart_icon {
+    font-size: 30px;
+    margin-left: 3vw;
+    margin-top: 5%;
+}
+
+
+.favs:hover {
+    background-color: #b65268;
+}
+
+.cart:hover {
+    background-color: #ead492;
+}
+
+
+.favs.cart_icon:hover {
+    background-color: #7e1d32;
+}

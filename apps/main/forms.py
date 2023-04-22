@@ -1,11 +1,28 @@
 from django import forms 
 
-from auths.models import ClientCustomUser
+from .models import Furniture, Basket
 
 
-# class ClientForm(forms.ModelForm):
-#     """Client form."""
+class FurnitureForm(forms.ModelForm):
+    """Furniture form."""
 
-#     class Meta:
-#         model = ClientCustomUser
-#         fields = ['email', 'first_name', 'last_name', 'password']
+    class Meta:
+        model = Furniture
+        fields = (
+            'title',
+            'room',
+            'price'
+        )
+
+
+class BasketForm(forms.ModelForm):
+    def __init__(self, *args, **kwargs):
+        super(Basket, self).__init__(*args, **kwargs)
+        self.fields['furniture'].required = False
+        self.fields['user'].required = False
+        self.fields['quantity_buying'].required = False
+        self.fields['price'].required = False
+
+    class Meta:
+        model = Basket
+        fields = "__all__"
